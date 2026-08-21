@@ -1,0 +1,4 @@
+(function(l,a,d,h,t){"use strict";const{FormText:i,FormSection:r}=h.Forms;function u(){t.React.useState(0);const e=a.storage.hiddenChannels??[];return t.React.createElement(r,{title:"Hide Channels"},t.React.createElement(i,null,"Hidden channels: ",e.length),t.React.createElement(i,null,"Channel IDs:",`
+
+`,e.length?e.join(`
+`):"No channels hidden."))}const n=a.storage.hiddenChannels??[];function o(){a.storage.hiddenChannels=n}function s(e){return n.includes(e)}function g(e){s(e)||(n.push(e),o())}function f(e){const c=n.indexOf(e);c!==-1&&(n.splice(c,1),o())}var C={onLoad(){d.logger.log("Hide Channels loaded")},onUnload(){d.logger.log("Hide Channels unloaded")},settings:u,hideChannel:g,unhideChannel:f,isHidden:s};return l.default=C,Object.defineProperty(l,"__esModule",{value:!0}),l})({},vendetta.plugin,vendetta,vendetta.ui.components,vendetta.metro.common);
