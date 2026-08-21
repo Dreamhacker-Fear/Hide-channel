@@ -7,8 +7,8 @@
       "id": "1367545898099408986"
     }
   ],
-  "main": "index.js",
-  "vendetta": {
+  "main": "",
+  "vendetta": {"src/index.ts"
     "icon": "ic_hide"
   }
 }
